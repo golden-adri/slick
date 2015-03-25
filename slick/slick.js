@@ -1962,6 +1962,8 @@
 
         _.dragging = false;
 
+        _.$list.removeClass('dragging');
+
         _.shouldClick = (_.touchObject.swipeLength > 10) ? false : true;
 
         if (_.touchObject.curX === undefined) {
@@ -2131,6 +2133,8 @@
         _.touchObject.startY = _.touchObject.curY = touches !== undefined ? touches.pageY : event.clientY;
 
         _.dragging = true;
+
+        _.$list.addClass('dragging');
 
     };
 
